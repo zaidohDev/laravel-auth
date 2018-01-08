@@ -26,5 +26,7 @@ return [
     'home' =>'Início',
     'you-are-loggerd in'=>'Você está logado!',
     'send-password-reset-link'=>'Enviar link para redefinição',
-    'dashbord'=>'Painel de Controle'
+    'dashbord'=>'Painel de Controle',
+    'phone'=>'Fone',
+    'cpf'=>'Cpf'
 ];

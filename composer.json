@@ -6,6 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=7.1",
+        "codeedu/code_validator": "0.0.2",
         "doctrine/dbal": "^2.6",
         "doctrine/doctrine-cache-bundle": "^1.2",
         "laravel/framework": "5.4.*",
