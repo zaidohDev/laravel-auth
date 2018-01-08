@@ -12,7 +12,9 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         factory(\App\User::class, 1)->states('admin')->create([
-           'email'=>'admin@email.com'
+            'email'=>'admin@email.com',
+            'phone'=>'00000000',
+            'cpf'  =>'62958099999'
         ]);
 
         factory(\App\User::class, 1)->states('user')->create([

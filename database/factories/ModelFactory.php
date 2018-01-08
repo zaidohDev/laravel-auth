@@ -20,11 +20,13 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
+        'phone'=>$faker->phoneNumber,
+        'cpf'=>str_random(11)
     ];
 });
 
 
-$factory->state(App\User::class, 'admin', function($faker){
+$factory->state(\App\User::class, 'admin', function($faker){
     return [
         'role'=>\App\User::ROLE_ADMIN
     ];
