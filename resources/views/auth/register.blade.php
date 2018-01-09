@@ -15,7 +15,8 @@
                             <label for="name" class="col-md-4 control-label">{{trans('auth.name')}}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control" name="name"
+                                       value="{{ old('name') }}" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -29,7 +30,8 @@
                             <label for="email" class="col-md-4 control-label">{{trans('auth.email')}}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control" name="email"
+                                       value="{{ old('email') }}" required>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -43,7 +45,8 @@
                             <label for="phone" class="col-md-4 control-label">{{trans('auth.phone')}}</label>
 
                             <div class="col-md-6">
-                                <input id="phone" type="text" class="form-control" name="phone" value="{{ old('phone') }}" required>
+                                <input id="phone" type="text" class="form-control" name="phone"
+                                       value="{{ old('phone') }}" required>
 
                                 @if ($errors->has('phone'))
                                     <span class="help-block">
@@ -57,7 +60,8 @@
                             <label for="cpf" class="col-md-4 control-label">{{trans('auth.cpf')}}</label>
 
                             <div class="col-md-6">
-                                <input id="cpf" type="text" class="form-control" name="cpf" value="{{ old('cpf') }}" required>
+                                <input id="cpf" type="text" class="form-control" name="cpf" value="{{ old('cpf') }}"
+                                       required>
 
                                 @if ($errors->has('cpf'))
                                     <span class="help-block">
@@ -82,10 +86,12 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">{{trans('auth.confirme-pass')}}</label>
+                            <label for="password-confirm" class="col-md-4 control-label">
+                                {{trans('auth.confirme-pass')}}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control"
+                                       name="password_confirmation" required>
                             </div>
                         </div>
 

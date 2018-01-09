@@ -40,4 +40,34 @@ class LoginController extends Controller
 
         return redirect($request->is('admin/*')? '/admin/login':'/login');
     }
+    protected function credentials(Request $request)
+    {
+        $data= $request->only($this->username(), 'password');
+
+        //$data['phone']=$data['email'];
+        $usernameKey= $this->usernameKey();
+
+        if ($usernameKey!=$this->username()){
+            $data[$this->usernameKey()]=$data[$this->username()];
+            unset($data[$this->username()]);
+        }
+
+        return $data;
+    }
+
+    protected function usernameKey(){
+        $email = \Request::get('email');
+
+        $validator= \Validator::make([
+            'email'=>$email
+        ], ['email'=>'cpf']);
+
+        if (!$validator->fails()){
+            return 'cpf';
+        }
+        if (is_numeric($email)){
+            return'phone';
+        }
+        return 'email';
+    }
 }
