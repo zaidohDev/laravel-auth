@@ -10,6 +10,7 @@
         "doctrine/dbal": "^2.6",
         "doctrine/doctrine-cache-bundle": "^1.2",
         "laravel/framework": "5.4.*",
+        "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0"
     },
     "require-dev": {
@@ -43,10 +44,14 @@
         ],
         "post-install-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan ide-helper:generate",
+            "php artisan ide-helper:meta",
             "php artisan optimize"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan ide-helper:generate",
+            "php artisan ide-helper:meta",
             "php artisan optimize"
         ]
     },
