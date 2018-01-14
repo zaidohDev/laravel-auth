@@ -8,6 +8,7 @@
         "php": ">=7.1",
         "codeedu/code_validator": "0.0.2",
         "doctrine/dbal": "^2.6",
+        "caouecs/laravel-lang":"^3.0",
         "doctrine/doctrine-cache-bundle": "^1.2",
         "laravel/framework": "5.4.*",
         "laravel/socialite": "^3.0",
@@ -58,9 +59,6 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
-        "optimize-autoloader": true,
-        "platform": {
-            "ext-mongo": "1.6.16"
-        }
+        "optimize-autoloader": true
     }
 }
